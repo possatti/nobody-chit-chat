@@ -15,8 +15,7 @@ app.use(express.static(__dirname + '/public'));
 io.on('connection', function (socket) {
 	// when the client emits 'new message', this listens and executes
 	socket.on('new message', function (message) {
-		console.log(message);
 		// we tell the clients to execute 'new message'
-		socket.broadcast.emit('new message', message);
+		io.emit('new message', message);
 	});
 });

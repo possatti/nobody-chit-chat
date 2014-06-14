@@ -1,9 +1,10 @@
 {
-  "name": "nobody-chit-chat",
+  "name": "nobody-talk",
   "version": "0.0.0",
-  "description": "A server with a single chat room for anonymous chit chating.",
+  "description": "A server with a single chat room for anonymous conversation.",
   "main": "index.js",
   "scripts": {
+    "start": "nodejs index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,7 +13,8 @@
   },
   "keywords": [
     "nobody",
-    "chat"
+    "chat",
+    "talk"
   ],
   "author": "Lucas Possatti",
   "license": "Apache-2.0",

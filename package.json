@@ -18,5 +18,9 @@
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/possatti/nobody-chit-chat/issues"
+  },
+  "dependencies": {
+    "express": "~4.4.3",
+    "socket.io": "~1.0.4"
   }
 }

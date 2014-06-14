@@ -1,0 +1,22 @@
+{
+  "name": "nobody-chit-chat",
+  "version": "0.0.0",
+  "description": "A server with a single chat room for anonymous chit chating.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/possatti/nobody-chit-chat.git"
+  },
+  "keywords": [
+    "nobody",
+    "chat"
+  ],
+  "author": "Lucas Possatti",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/possatti/nobody-chit-chat/issues"
+  }
+}

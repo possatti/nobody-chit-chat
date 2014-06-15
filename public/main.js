@@ -21,6 +21,9 @@ function addMessage (message) {
 
   // Puts the message on the chat area
   $messages.append($messageDiv);
+
+  // Scrolls the page.
+  $messages[0].scrollTop = $messages[0].scrollHeight;
 }
 
 // Prevents input from having injected markup

@@ -11,21 +11,26 @@ function log(logmessage) {
 }
 
 server.listen(port, function () {
-	log('Server listening at port %d', port);
+	console.log('Server listening at port %d', port);
 });
 
 // Routing
 app.use(express.static(__dirname + '/public'));
 
+// Current number of nobodies connected
+var nobodyCount = 0;
+
 io.on('connection', function (socket) {
-	// get the user address and log it
-	var address = socket.handshake.address;
-    log("Nobody joined from " + address.address + ":" + address.port);
+	// Increase the number of nobodies connected
+	++nobodyCount;
+
+	// log info for the new connection
+	log("Nobody joined. " + nobodyCount + " online");
 
 	// when the client emits 'new message', this listens and executes
 	socket.on('new message', function (message) {
-		// log the message
-		log("Nobody sad " + message);
+		// log the message recieved
+		log("Nobody said " + message);
 
 		// we tell the clients to execute 'new message'
 		io.emit('new message', message);
@@ -33,7 +38,10 @@ io.on('connection', function (socket) {
 
 	// when the client disconnects
 	socket.on('disconnect', function () {
-		// log who is leaving
-		log("Nobody left from " + address.address + ":" + address.port);
+		// Reduces the number of nobodies connected
+		--nobodyCount;
+
+		// log info for the nobody leaving
+		log("Nobody left. " + nobodyCount + " online");
 	});
 });

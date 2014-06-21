@@ -145,14 +145,17 @@ ul {
 
 /* Input */
 
+.inputArea {
+}
+
 .inputMessage {
-  border: 10px solid #000;
   bottom: 0;
-  height: 60px;
   left: 0;
-  outline: none;
+  right: 0;
+  height: 60px;
   padding-left: 10px;
   position: absolute;
-  right: 0;
   width: 100%;
+  outline: none;
+  border: 5px solid #a8f07a;
 }
